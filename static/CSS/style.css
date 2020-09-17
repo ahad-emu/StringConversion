@@ -1,0 +1,23 @@
+.text-list{
+  background-color: #e9ecef;
+  border-color:#f0b607;
+}
+.text-list a{
+  color: #000;
+}
+.text-list:hover{
+  background-color:#f0b607;
+  border-color:#e9ecef;
+}
+.navbar{
+  padding: 1.5rem 1rem;
+}
+
+.check-list{
+  background-color: #e9ecef;
+  border-color:#f0b607;
+}
+.check-list:hover{
+  background-color:#f0b607;
+  border-color:#000;
+}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="mb-5">Accidentally left the caps lock on and typed something, but can't be bothered to start again and retype it all?</h1>
+    <h6 class="mb-4">Simply enter your text and choose the case you want to convert it to.</h6>
+
+    <div class="form-group mb-4">
+      <textarea class="form-control" id="sampletext" rows="6"></textarea>
+    </div>
+
+    <div class="">
+      <div class="btn btn-sm check-list p-2 mr-2" onclick="SentenceCase()">Sentence case</div>
+      <div class="btn btn-sm check-list p-2 mr-2" onclick="lowerCase()">lower case</div>
+      <div class="btn btn-sm check-list p-2 mr-2" onclick="upperCase()">UPPER CASE</div>
+      <div class="btn btn-sm check-list p-2 mr-2" onclick="capitalize()">Capitalized Case</div>
+      <div class="btn btn-sm check-list p-2 mr-2">AlTeRnAtInG cAsE</div>
+      <div class="btn btn-sm check-list p-2 mr-2">Inverse case</div>
+      <div class="btn btn-sm check-list p-2 mr-2">Copy to clipboard</div>
+      <div class="btn btn-sm check-list p-2 mr-2" onclick="cleartext()">clear</div>
+    </div>
+  </div>
+</div>
+<div class="" id="test"
+</div>
+{% endblock %}
