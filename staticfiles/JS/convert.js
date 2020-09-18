@@ -33,7 +33,7 @@ function capitalize() {
 /*alternating case text formate */
 function alternating(){
   var x = document.getElementById('sampletext').value;
-  var length = x.length;
+  var length = x.strlen();
   var y = "";
 
   for(let i = 0; i<length; i++){
@@ -42,25 +42,6 @@ function alternating(){
     }
     else{
       y = y + x[i].toUpperCase();
-    }
-  }
-  document.getElementById('sampletext').value = y;
-}
-
-/* Inverse case text formate */
-function inverse(){
-  var x = document.getElementById('sampletext').value;
-  var length = x.length;
-  var y = "";
-  for(let i = 0; i<length; i++){
-    if(x[i] >= 'A' && x[i] <= 'Z'){
-      y = y + x[i].toLowerCase();
-    }
-    else if (x[i] >= 'a' && x[i] <= 'z') {
-      y = y + x[i].toUpperCase();
-    }
-    else{
-      y = y + x[i];
     }
   }
   document.getElementById('sampletext').value = y;
