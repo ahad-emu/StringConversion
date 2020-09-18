@@ -21,3 +21,12 @@
   background-color:#f0b607;
   border-color:#000;
 }
+
+.box{
+  height: 160px;
+  width: 100%;
+}
+.active{
+  background-color:#f0b607;
+  border-color:#e9ecef;
+}

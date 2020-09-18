@@ -7,7 +7,7 @@
     <h6 class="mb-4">Simply enter your text and choose the case you want to convert it to.</h6>
 
     <div class="form-group mb-4">
-      <textarea class="form-control" id="sampletext" rows="6"></textarea>
+      <textarea class="form-control" id="sampletext" rows="6" onkeyup="counter()"></textarea>
     </div>
 
     <div class="">
@@ -17,11 +17,18 @@
       <div class="btn btn-sm check-list p-2 mr-2" onclick="capitalize()">Capitalized Case</div>
       <div class="btn btn-sm check-list p-2 mr-2" onclick="alternating()">AlTeRnAtInG cAsE</div>
       <div class="btn btn-sm check-list p-2 mr-2" onclick="inverse()">Inverse case</div>
-      <div class="btn btn-sm check-list p-2 mr-2">Copy to clipboard</div>
+      <div class="btn btn-sm check-list p-2 mr-2" data-toggle="tooltip" data-placement="top" title="Copy to clipboard" onclick="copyFunctions()">Copy to clipboard</div>
       <div class="btn btn-sm check-list p-2 mr-2" onclick="cleartext()">clear</div>
     </div>
+
+    <div class="row mt-3">
+      <div class="col-md-3">
+        Character Count : <span id="character">0</span>
+      </div>|
+      <div class="col-md-3">
+        Word Count : <span id="word">0</span>
+      </div>
+    </div>
   </div>
-</div>
-<div class="" id="test"
 </div>
 {% endblock %}

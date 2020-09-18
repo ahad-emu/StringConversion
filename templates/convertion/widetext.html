@@ -1,5 +1,40 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-widetext
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="mb-5">Wide Text Generator</h1>
+    <h6 class="mb-4">A simple to use online vaporwave text generator tool that widens and
+      spaces out your text. It basically converts
+      your normal text into a vaporwave font, you will see that is also referred to as an aesthetic font.
+    </h6>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <textarea class="form-control" id="sampletext" rows="6" onkeyup="cssChange()"></textarea>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <div class="form-control box" >
+              <div style="color: red;">
+                Wide Text:
+              </div>
+              <span style="letter-spacing: 5px;" id="outputtext">Your output content</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-3">
+        Character Count : <span id="character">0</span>
+      </div>|
+      <div class="col-md-3">
+        Word Count : <span id="word">0</span>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

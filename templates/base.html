@@ -15,25 +15,73 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item btn text-list mr-3 ml-3">
+            <li
+              {% if '/' == request.path %}
+                class="nav-item btn text-list active mr-3 ml-3"
+              {% else %}
+                class="nav-item btn text-list mr-3 ml-3"
+              {% endif %}
+            >
               <a class="nav-link" style="color: #000;" href="{% url 'index' %}">Convert Case</a>
             </li>
-            <li class="nav-item btn text-list mr-3">
+
+            <li
+              {% if '/smallText' == request.path %}
+                class="nav-item btn text-list active mr-3"
+              {% else %}
+                class="nav-item btn text-list mr-3"
+              {% endif %}
+            >
               <a class="nav-link" style="color: #000;" href="{% url 'small' %}">Small Text Generator</a>
             </li>
-            <li class="nav-item btn text-list mr-3">
+
+            <li
+            {% if '/wideText' == request.path %}
+              class="nav-item btn text-list active mr-3"
+            {% else %}
+              class="nav-item btn text-list mr-3"
+            {% endif %}
+            >
               <a class="nav-link" style="color: #000;" href="{% url 'wide' %}">Wide Text Generator</a>
             </li>
-            <li class="nav-item btn text-list mr-3">
+
+            <li
+            {% if '/strikeThrough' == request.path %}
+              class="nav-item btn text-list active mr-3"
+            {% else %}
+              class="nav-item btn text-list mr-3"
+            {% endif %}
+            >
               <a class="nav-link" style="color: #000;" href="{% url 'strike' %}">StrikeThrough Text Generator</a>
             </li>
-            <li class="nav-item btn text-list mr-3">
+
+            <li
+            {% if '/boldText' == request.path %}
+              class="nav-item btn text-list active mr-3"
+            {% else %}
+              class="nav-item btn text-list mr-3"
+            {% endif %}
+            >
               <a class="nav-link" style="color: #000;" href="{% url 'bold' %}">Bold Text Generator</a>
             </li>
-            <li class="nav-item btn text-list mr-3">
+
+            <li
+            {% if '/italic' == request.path %}
+              class="nav-item btn text-list active mr-3"
+            {% else %}
+              class="nav-item btn text-list mr-3"
+            {% endif %}
+            >
               <a class="nav-link" style="color: #000;" href="{% url 'italic' %}">Italic Text Generator</a>
             </li>
-            <li class="nav-item btn text-list mr-3">
+
+            <li
+            {% if '/underlineText' == request.path %}
+              class="nav-item btn text-list active mr-3"
+            {% else %}
+              class="nav-item btn text-list mr-3"
+            {% endif %}
+            >
               <a class="nav-link" style="color: #000;" href="{% url 'underline' %}">Underline Text Generator</a>
             </li>
           </ul>
@@ -42,11 +90,14 @@
     </div>
     {% block content %}
     {% endblock %}
-
+    <footer class="page-footer font-small" style="background-color: #101010; clear:both;">
+      <div class="footer-copyright text-center py-3 text-light">© AhadEmu {% now 'Y' %}</div>
+    </footer>
     <!--JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static 'JS/convert.js' %}"></script>
+    <script type="text/javascript" src="{% static 'JS/otherspage.js' %}"></script>
   </body>
 </html>

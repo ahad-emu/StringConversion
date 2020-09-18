@@ -1,5 +1,39 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-underline
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="mb-5">Underline Text</h1>
+    <h6 class="mb-4">Get your text quickly underlined using the underline text tool below. Paste or
+      write the text you want underlined on the left and get it converted to have the underline on the right.
+    </h6>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <textarea class="form-control" id="sampletext" rows="6" onkeyup="cssChange()"></textarea>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <div class="form-control box" >
+              <div style="color: red;">
+                Underline Text:
+              </div>
+              <span style="text-decoration: Underline;" id="outputtext">Your output content</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-3">
+        Character Count : <span id="character">0</span>
+      </div>|
+      <div class="col-md-3">
+        Word Count : <span id="word">0</span>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

@@ -1,5 +1,39 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-strikethrough
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="mb-5">Strikethrough Text Generator</h1>
+    <h6 class="mb-4">Simple and easy to use strikethrough text generator.
+      Convert standard text into crossed out text with this online strike text generator.
+    </h6>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <textarea class="form-control" id="sampletext" rows="6" onkeyup="cssChange()"></textarea>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <div class="form-control box" >
+              <div style="color: red;">
+                Strike Through:
+              </div>
+              <span style="text-decoration: line-through;" id="outputtext">Your output content</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-3">
+        Character Count : <span id="character">0</span>
+      </div>|
+      <div class="col-md-3">
+        Word Count : <span id="word">0</span>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

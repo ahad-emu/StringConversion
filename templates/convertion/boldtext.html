@@ -1,5 +1,39 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-boldtext
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="mb-5">Bold Text Generator</h1>
+    <h6 class="mb-4">Use this handy bold text generator. Simply paste or write the text that you need to be converted into a bold font into the left field, then as you write it, you will see it being converted into bold into the field on the right.
+      Then simply copy and paste it where you want it to go.
+    </h6>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <textarea class="form-control" id="sampletext" rows="6" onkeyup="cssChange()"></textarea>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <div class="form-control box" >
+              <div style="color: red;">
+                Bold Text:
+              </div>
+              <span style="font-weight: bold;" id="outputtext">Your output content</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-3">
+        Character Count : <span id="character">0</span>
+      </div>|
+      <div class="col-md-3">
+        Word Count : <span id="word">0</span>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

@@ -1,5 +1,40 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-smalltext
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="mb-5">Small Text Generator</h1>
+    <h6 class="mb-4">The small text generator is a handy online tool,
+    where you can convert standard text (whether that’s capitals, small letters and more) into tiny text.
+    The tiny text options are ‘small caps’. Find out how to use the tiny text generator below.
+    </h6>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <textarea class="form-control" id="sampletext" rows="6" onkeyup="cssChange()"></textarea>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group mb-4">
+          <div class="form-control box" >
+              <div style="color: red;">
+                Small Caps:
+              </div>
+              <small style="font-variant: small-caps;" id="outputtext">Your output content</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-3">
+        Character Count : <span id="character">0</span>
+      </div>|
+      <div class="col-md-3">
+        Word Count : <span id="word">0</span>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
