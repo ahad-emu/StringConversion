@@ -1,12 +1,12 @@
 .text-list{
-  background-color: #e9ecef;
-  border-color:#f0b607;
+  background-color: #056676;
+  color: #FFFFFF;
 }
 .text-list a{
-  color: #000;
+  color: #FFFFFF;
 }
 .text-list:hover{
-  background-color:#f0b607;
+  background-color: #f0a500;
   border-color:#e9ecef;
 }
 .navbar{
@@ -14,12 +14,16 @@
 }
 
 .check-list{
-  background-color: #e9ecef;
-  border-color:#f0b607;
+  background-color: #5eaaa8;
+  border-color:#FFFFFF;
+  font-weight: 500;
+  color: #FFFFFF;
 }
 .check-list:hover{
-  background-color:#f0b607;
+  background-color:#f0a500;
+  color: #000;
   border-color:#000;
+  font-weight: 500;
 }
 
 .box{
@@ -27,6 +31,6 @@
   width: 100%;
 }
 .active{
-  background-color:#f0b607;
+  background-color:#cf7500;
   border-color:#e9ecef;
 }

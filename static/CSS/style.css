@@ -1,8 +1,6 @@
 .text-list{
-  background-color: #e9ecef;
-}
-.text-list a{
-  color: #000;
+  background-color: #056676;
+  color: #FFFFFF;
 }
 .text-list:hover{
   background-color: #f0a500;
@@ -13,14 +11,16 @@
 }
 
 .check-list{
-  background-color: #ffffff;
-  border-color:#f0a500;
-  font-weight: 400;
+  background-color: #056676;
+  border-color:#FFFFFF;
+  font-weight: 500;
+  color: #FFFFFF;
 }
 .check-list:hover{
   background-color:#f0a500;
+  color: #000;
   border-color:#000;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .box{
